@@ -1,0 +1,59 @@
+# ─── Environment & Secrets ─────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+*.secret
+secrets/
+credentials/
+
+# ─── Node / JS ──────────────────────────────────────────────────────────────
+node_modules/
+dist/
+build/
+.cache/
+.parcel-cache/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ─── Python ─────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+.pytest_cache/
+.mypy_cache/
+
+# ─── OS / Editor ────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/settings.json
+.vscode/.ropeproject
+
+# ─── Logs & Temp ────────────────────────────────────────────────────────────
+logs/
+*.log
+tmp/
+temp/
+
+# ─── OpenCode / PHOTON artefacts ────────────────────────────────────────────
+.opencode/cache/
+photon/runtime/
+photon/*.pid
+
+# ─── Switch Local Server ────────────────────────────────────────────────────
+switch-server/data/
+switch-server/*.db
+
+# ─── Coverage & Reports ─────────────────────────────────────────────────────
+coverage/
+htmlcov/
+.nyc_output/
