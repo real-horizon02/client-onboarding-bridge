@@ -106,6 +106,15 @@ client-onboarding-bridge/
 ├── .env.example                     ← Safe template (no real tokens)
 ├── .gitignore
 │
+├── projects/
+│   └── urban-threads/               ← Review prototype (AWAITING PM REVIEW)
+│       ├── index.html               ← Prototype entry point
+│       ├── styles.css               ← Responsive styles
+│       ├── app.js                   ← Prototype interactions
+│       ├── README.md                ← Project documentation
+│       └── docs/
+│           └── test-results.md      ← Full audit and test log
+│
 ├── agents/
 │   ├── intake.md                    ← Intake agent spec
 │   ├── spec-writer.md               ← Specification agent spec

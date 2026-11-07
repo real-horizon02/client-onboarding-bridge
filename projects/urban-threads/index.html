@@ -1,0 +1,656 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Urban Threads â€” Everyday essentials, cut with intent</title>
+<meta name="description" content="Urban Threads design prototype â€” clothing brand website demonstration.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="g-tee" viewBox="28 22 144 236">
+    <path d="M72 38 L88 30 C94 44 106 44 112 30 L128 38 L162 66 L146 92 L138 84 L138 228 C112 236 88 236 62 228 L62 84 L54 92 L38 66 Z"/>
+    <path class="stitch" d="M84 34 C90 50 110 50 116 34"/>
+    <path class="stitch" d="M62 84 L54 92 M138 84 L146 92"/>
+  </symbol>
+  <symbol id="g-shirt" viewBox="28 22 144 236">
+    <path d="M72 36 L88 28 C94 42 106 42 112 28 L128 36 L160 62 L146 88 L138 80 L138 230 C112 238 88 238 62 230 L62 80 L54 88 L40 62 Z"/>
+    <path class="stitch" d="M88 28 L100 52 L112 28 M100 52 L100 232"/>
+    <circle class="stitch-dot" cx="100" cy="96" r="2.6"/><circle class="stitch-dot" cx="100" cy="126" r="2.6"/>
+    <circle class="stitch-dot" cx="100" cy="156" r="2.6"/><circle class="stitch-dot" cx="100" cy="186" r="2.6"/>
+  </symbol>
+  <symbol id="g-dress" viewBox="28 22 144 236">
+    <path d="M70 36 L88 28 C94 40 106 40 112 28 L130 36 L144 74 L134 84 L150 218 C118 230 82 230 50 218 L66 84 L56 74 Z"/>
+    <path class="stitch" d="M66 84 C88 92 112 92 134 84 M100 100 L100 224"/>
+  </symbol>
+  <symbol id="g-trousers" viewBox="28 22 144 236">
+    <path d="M68 34 H132 L140 232 H110 L100 120 L90 232 H60 Z"/>
+    <path class="stitch" d="M68 52 H132 M100 52 V120"/>
+  </symbol>
+  <symbol id="g-hoodie" viewBox="28 22 144 236">
+    <path d="M70 42 L88 32 C94 44 106 44 112 32 L130 42 L164 70 L150 96 L142 88 V230 C112 238 88 238 58 230 V88 L50 96 L36 70 Z"/>
+    <path class="stitch" d="M86 34 C88 52 112 52 114 34 M84 176 H116 V210 H84 Z"/>
+  </symbol>
+  <symbol id="g-kurta" viewBox="28 22 144 236">
+    <path d="M72 38 L88 30 C94 43 106 43 112 30 L128 38 L158 64 L146 88 L138 80 V244 C112 250 88 250 62 244 V80 L54 88 L42 64 Z"/>
+    <path class="stitch" d="M88 30 L100 54 L112 30 M100 54 V246 M62 200 L62 244 M138 200 L138 244"/>
+  </symbol>
+  <symbol id="g-jacket" viewBox="28 22 144 236">
+    <path d="M68 40 L88 30 L100 54 L112 30 L132 40 L166 66 L150 94 L142 86 V230 C112 238 88 238 58 230 V86 L50 94 L34 66 Z"/>
+    <path class="stitch" d="M100 54 V234 M88 30 L100 54 L112 30"/>
+  </symbol>
+  <symbol id="g-top" viewBox="28 22 144 236">
+    <path d="M74 40 L88 32 C94 44 106 44 112 32 L126 40 L156 62 L144 84 L136 78 V220 C112 228 88 228 64 220 V78 L56 84 L44 62 Z"/>
+    <path class="stitch" d="M84 36 C90 48 110 48 116 36 M68 96 H132 M68 116 H132 M68 136 H132 M68 156 H132 M68 176 H132 M68 196 H132"/>
+  </symbol>
+  <symbol id="g-sweatshirt" viewBox="28 22 144 236">
+    <path d="M70 40 L88 30 C94 42 106 42 112 30 L130 40 L162 68 L148 94 L140 86 V218 C112 228 88 228 60 218 V86 L52 94 L38 68 Z"/>
+    <path class="stitch" d="M86 34 C90 50 110 50 114 34 M62 200 H138"/>
+  </symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="demo-strip">
+  <p>Design prototype for review â€” not a live store. No accounts, orders or payments are processed.</p>
+</div>
+
+<header class="header" data-header>
+  <div class="header__inner">
+    <a class="brand" href="#/" aria-label="Urban Threads home">
+      <span class="brand__mark">UT</span>
+      <span class="brand__name">Urban&nbsp;Threads</span>
+    </a>
+
+    <nav class="nav" id="primary-nav" aria-label="Primary">
+      <a class="nav__link" href="#/" data-nav="home">Home</a>
+      <a class="nav__link" href="#/shop" data-nav="shop">Shop</a>
+      <a class="nav__link" href="#/contact" data-nav="contact">Contact</a>
+      <a class="nav__link nav__link--admin" href="#/admin" data-nav="admin">Admin</a>
+      <a class="nav__link nav__link--signin" href="#/login" data-nav="login">Sign in</a>
+    </nav>
+
+    <div class="header__actions">
+      <a class="btn btn--ghost btn--sm" href="#/login" data-nav="login">Sign in</a>
+      <a class="btn btn--primary btn--sm header__shop" href="#/shop">Shop new in</a>
+      <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+  <!-- ===================== HOME ===================== -->
+  <section class="view" data-view="home" hidden>
+    <div class="hero">
+      <div class="hero__copy">
+        <p class="eyebrow">Spring / Summer 26 Â· Bengaluru</p>
+        <h1 class="hero__title">Everyday essentials,<br><em>cut with intent.</em></h1>
+        <p class="hero__lede">Thoughtful fabrics, relaxed tailoring and a palette built for the Indian everyday. Made in small batches, worn on repeat.</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#/shop">Shop the collection</a>
+          <a class="btn btn--ghost" href="#/shop" data-gender="Women">Shop womenswear</a>
+        </div>
+        <ul class="hero__meta">
+          <li><strong>SS26</strong><span>current collection</span></li>
+          <li><strong>100%</strong><span>cotton &amp; linen</span></li>
+          <li><strong>â‚¹899</strong><span>starting price</span></li>
+        </ul>
+      </div>
+
+      <div class="hero__art" aria-hidden="true">
+        <figure class="look look--a">
+          <span class="look__tag">New in</span>
+          <svg class="garment" style="--garment:#2E3A4B"><use href="#g-shirt"/></svg>
+          <figcaption>Linen Overshirt</figcaption>
+        </figure>
+        <figure class="look look--b">
+          <svg class="garment" style="--garment:#A6482C"><use href="#g-dress"/></svg>
+          <figcaption>Midi Wrap Dress</figcaption>
+        </figure>
+        <figure class="look look--c">
+          <svg class="garment" style="--garment:#4F5747"><use href="#g-trousers"/></svg>
+          <figcaption>Relaxed Chinos</figcaption>
+        </figure>
+        <span class="hero__word">SS26</span>
+      </div>
+    </div>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Free delivery over â‚¹1,499</span><span>Â·</span>
+        <span>30-day easy returns</span><span>Â·</span>
+        <span>Made in India</span><span>Â·</span>
+        <span>Small-batch production</span><span>Â·</span>
+        <span>Free delivery over â‚¹1,499</span><span>Â·</span>
+        <span>30-day easy returns</span><span>Â·</span>
+        <span>Made in India</span><span>Â·</span>
+        <span>Small-batch production</span><span>Â·</span>
+      </div>
+    </div>
+
+    <section class="section section--tight">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow">Browse</p>
+          <h2 class="h2">Find your everyday</h2>
+        </div>
+        <a class="link-arrow" href="#/shop">All categories <span>&rarr;</span></a>
+      </div>
+      <div class="cats">
+        <a class="cat" href="#/shop" data-gender="Women">
+          <span class="cat__art"><svg class="garment" style="--garment:#B9795E"><use href="#g-dress"/></svg></span>
+          <span class="cat__label">Womenswear</span>
+          <span class="cat__count">Shop now</span>
+        </a>
+        <a class="cat" href="#/shop" data-gender="Men">
+          <span class="cat__art"><svg class="garment" style="--garment:#2E3A4B"><use href="#g-shirt"/></svg></span>
+          <span class="cat__label">Menswear</span>
+          <span class="cat__count">Shop now</span>
+        </a>
+        <a class="cat" href="#/shop" data-gender="Indian wear">
+          <span class="cat__art"><svg class="garment" style="--garment:#8E3B2A"><use href="#g-kurta"/></svg></span>
+          <span class="cat__label">Indian wear</span>
+          <span class="cat__count">Shop now</span>
+        </a>
+        <a class="cat" href="#/shop" data-gender="Unisex">
+          <span class="cat__art"><svg class="garment" style="--garment:#4F5747"><use href="#g-hoodie"/></svg></span>
+          <span class="cat__label">Unisex essentials</span>
+          <span class="cat__count">Shop now</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow">The edit</p>
+          <h2 class="h2">Most loved this week</h2>
+        </div>
+        <a class="link-arrow" href="#/shop">View all styles <span>&rarr;</span></a>
+      </div>
+      <div class="product-grid" data-featured-grid></div>
+    </section>
+
+    <section class="story">
+      <div class="story__copy">
+        <p class="eyebrow eyebrow--light">Our approach</p>
+        <h2 class="h2 h2--light">Fewer, better pieces.<br>Made for real life.</h2>
+        <p>We design around the way India actually dresses â€” long commutes, warm afternoons, working weeks and slow weekends. Every style is cut in breathable fabric, tested across sizes and produced in limited runs.</p>
+        <a class="btn btn--light" href="#/contact">Talk to our team</a>
+      </div>
+      <div class="story__points">
+        <div class="point">
+          <span class="point__num">01</span>
+          <h3>Considered fabric</h3>
+          <p>Cotton, linen and modal blends chosen for Indian weather.</p>
+        </div>
+        <div class="point">
+          <span class="point__num">02</span>
+          <h3>Honest pricing</h3>
+          <p>Direct-to-consumer, no middlemen, no inflated MRPs.</p>
+        </div>
+        <div class="point">
+          <span class="point__num">03</span>
+          <h3>Small batches</h3>
+          <p>Limited runs with two trusted units in Tiruppur and Bengaluru.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow">New arrivals</p>
+          <h2 class="h2">Just landed</h2>
+        </div>
+        <a class="link-arrow" href="#/shop" data-sort="new">Shop new in <span>&rarr;</span></a>
+      </div>
+      <div class="product-grid" data-new-grid></div>
+    </section>
+  </section>
+
+  <!-- ===================== SHOP ===================== -->
+  <section class="view" data-view="shop" hidden>
+    <div class="page-head">
+      <p class="eyebrow">Spring / Summer 26</p>
+      <h1 class="h1">The collection</h1>
+      <p class="page-head__lede">A curated edit from the SS26 collection, designed in Bengaluru. Filter by category, fit and price.</p>
+    </div>
+
+    <div class="shop">
+      <aside class="filters" id="shop-filters" aria-label="Product filters">
+        <div class="filters__group">
+          <h2 class="filters__title">Shop for</h2>
+          <div class="chips" data-filter-gender role="group" aria-label="Gender">
+            <button class="chip is-active" type="button" data-value="All">All</button>
+            <button class="chip" type="button" data-value="Women">Women</button>
+            <button class="chip" type="button" data-value="Men">Men</button>
+            <button class="chip" type="button" data-value="Unisex">Unisex</button>
+            <button class="chip" type="button" data-value="Indian wear">Indian wear</button>
+          </div>
+        </div>
+
+        <div class="filters__group">
+          <h2 class="filters__title">Category</h2>
+          <ul class="filter-list" data-filter-category>
+            <li><button class="is-active" type="button" data-value="All">All categories <span>12</span></button></li>
+            <li><button type="button" data-value="T-shirts">T-shirts <span>12</span></button></li>
+            <li><button type="button" data-value="Shirts">Shirts <span>9</span></button></li>
+            <li><button type="button" data-value="Bottoms">Bottoms <span>11</span></button></li>
+            <li><button type="button" data-value="Dresses">Dresses <span>7</span></button></li>
+            <li><button type="button" data-value="Indian wear">Indian wear <span>8</span></button></li>
+            <li><button type="button" data-value="Outerwear">Outerwear <span>4</span></button></li>
+            <li><button type="button" data-value="Sweatshirts">Sweatshirts <span>5</span></button></li>
+          </ul>
+        </div>
+
+        <div class="filters__group">
+          <h2 class="filters__title">Max price</h2>
+          <label class="range">
+            <input type="range" min="899" max="4999" step="100" value="4999" data-price-range>
+            <span class="range__out" data-price-out>â‚¹4,999</span>
+          </label>
+          <p class="filters__hint">Showing pieces up to the selected price.</p>
+        </div>
+
+        <button class="btn btn--ghost btn--block" type="button" data-reset-filters>Clear filters</button>
+      </aside>
+
+      <div class="shop__main">
+        <div class="shop__bar">
+          <button class="filters-toggle" type="button" data-filters-toggle aria-expanded="false" aria-controls="shop-filters">Filters</button>
+          <p class="shop__count" data-count aria-live="polite">Showing 12 styles</p>
+          <div class="sort">
+            <label for="sort-select">Sort</label>
+            <select id="sort-select" data-sort-select>
+              <option value="featured">Featured</option>
+              <option value="new">Newest</option>
+              <option value="low">Price: low to high</option>
+              <option value="high">Price: high to low</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="product-grid product-grid--shop" data-shop-grid></div>
+
+        <div class="empty" data-empty hidden>
+          <h2 class="h3">No pieces match those filters</h2>
+          <p>Try widening your price range or clearing a filter.</p>
+          <button class="btn btn--primary" type="button" data-reset-filters>Clear filters</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LOGIN ===================== -->
+  <section class="view view--auth" data-view="login" hidden>
+    <div class="auth">
+      <aside class="auth__aside">
+        <div class="auth__brand">
+          <span class="brand__mark">UT</span>
+          <span class="brand__name">Urban&nbsp;Threads</span>
+        </div>
+        <blockquote class="auth__quote">
+          â€œGood clothes should feel like a decision you keep making.â€
+        </blockquote>
+        <div class="auth__art" aria-hidden="true">
+          <svg class="garment" style="--garment:#A6482C"><use href="#g-top"/></svg>
+          <svg class="garment" style="--garment:#E9E1D1"><use href="#g-dress"/></svg>
+          <svg class="garment" style="--garment:#4F5747"><use href="#g-shirt"/></svg>
+        </div>
+        <p class="auth__note">Members get early access to drops, saved sizes and order tracking.</p>
+      </aside>
+
+      <div class="auth__main">
+        <div class="auth__card">
+          <p class="eyebrow">Welcome back</p>
+          <h1 class="h1 h1--sm">Sign in to your account</h1>
+          <p class="auth__lede">Demo screen â€” enter anything to preview the member experience.</p>
+
+          <form class="form" data-login-form novalidate>
+            <div class="field">
+              <label for="login-email">Email address</label>
+              <input id="login-email" name="email" type="email" autocomplete="off" placeholder="you@example.com" required>
+            </div>
+            <div class="field">
+              <label for="login-password">Password</label>
+              <div class="field__pw">
+                <input id="login-password" name="password" type="password" autocomplete="off" placeholder="Enter any password" required>
+                <button class="field__toggle" type="button" data-toggle-password aria-label="Show password">Show</button>
+              </div>
+            </div>
+            <div class="form__row">
+              <label class="check"><input type="checkbox" name="remember" checked> <span>Keep me signed in</span></label>
+              <a class="link" href="#/login" data-demo-link>Forgot password?</a>
+            </div>
+            <button class="btn btn--primary btn--block" type="submit">Sign in</button>
+            <p class="form__foot">New to Urban Threads? <a class="link" href="#/login" data-demo-link>Create an account</a></p>
+          </form>
+
+          <div class="demo-creds">
+            <span class="demo-creds__label">Demo credentials</span>
+            <code>priya@demo.in</code><span>/</span><code>urban26</code>
+          </div>
+          <p class="micro">Prototype only â€” no account is created, stored or verified.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ADMIN ===================== -->
+  <section class="view view--admin" data-view="admin" hidden>
+    <div class="admin">
+      <aside class="admin__side">
+        <div class="admin__brand">
+          <span class="brand__mark brand__mark--sm">UT</span>
+          <div>
+            <strong>Urban Threads</strong>
+            <span>Admin preview</span>
+          </div>
+        </div>
+        <nav class="admin__nav" aria-label="Admin">
+          <a class="is-active" href="#/admin" data-admin-tab="dashboard">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13h6V4H4v9Zm0 7h6v-5H4v5Zm10 0h6v-9h-6v9Zm0-16v5h6V4h-6Z"/></svg>
+            Dashboard
+          </a>
+          <a href="#/admin" data-admin-tab="products">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7 12 3 4 7v10l8 4 8-4V7Zm-8 2.2 5.9-2.9L12 4.4 6.1 6.3 12 9.2Zm-6 1.6v5.9l5 2.5v-5.9l-5-2.5Zm7 8.4 5-2.5V10.8l-5 2.5v5.9Z"/></svg>
+            Products
+          </a>
+          <a href="#/shop">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a4 4 0 0 0-4 4H5l1 14h12l1-14h-3a4 4 0 0 0-4-4Zm0 2a2 2 0 0 1 2 2H10a2 2 0 0 1 2-2Z"/></svg>
+            View storefront
+          </a>
+        </nav>
+        <div class="admin__side-foot">
+          <div class="admin__user">
+            <span class="avatar">PK</span>
+            <div><strong>Priya K.</strong><span>Store admin</span></div>
+          </div>
+          <p class="micro">Demo data Â· resets on refresh</p>
+        </div>
+      </aside>
+
+      <div class="admin__main">
+        <div class="admin__top">
+          <div>
+            <p class="eyebrow">Overview</p>
+            <h1 class="h1 h1--sm">Dashboard</h1>
+          </div>
+          <div class="admin__top-actions">
+            <a class="btn btn--ghost btn--sm" href="#/shop">Preview store</a>
+            <button class="btn btn--primary btn--sm" type="button" data-new-product>+ New product</button>
+          </div>
+        </div>
+        <p class="admin__banner">Admin preview with fictional data. Creating, editing and deleting products is for demonstration and resets on page refresh.</p>
+
+        <div class="stats">
+          <div class="stat">
+            <span class="stat__label">Products live</span>
+            <strong class="stat__value" data-stat="live">12</strong>
+            <span class="stat__delta stat__delta--up">+3 this month</span>
+          </div>
+          <div class="stat">
+            <span class="stat__label">Drafts</span>
+            <strong class="stat__value" data-stat="draft">2</strong>
+            <span class="stat__delta">Awaiting photos</span>
+          </div>
+          <div class="stat">
+            <span class="stat__label">Enquiries this week</span>
+            <strong class="stat__value">38</strong>
+            <span class="stat__delta stat__delta--up">+12% vs last week</span>
+          </div>
+          <div class="stat">
+            <span class="stat__label">Storefront visits</span>
+            <strong class="stat__value">2,418</strong>
+            <span class="stat__delta">Last 7 days</span>
+          </div>
+        </div>
+
+        <section class="admin__panel">
+          <div class="admin__panel-head">
+            <div>
+              <h2 class="h3">Products</h2>
+              <p class="micro">Manage catalogue, pricing and availability.</p>
+            </div>
+            <div class="admin__search">
+              <input type="search" placeholder="Search products" aria-label="Search products" data-admin-search>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Product</th>
+                  <th scope="col">Category</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Stock</th>
+                  <th scope="col">Status</th>
+                  <th scope="col"><span class="sr-only">Actions</span></th>
+                </tr>
+              </thead>
+              <tbody data-admin-rows></tbody>
+            </table>
+          </div>
+          <p class="table-empty" data-admin-empty hidden>No products match that search.</p>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="view" data-view="contact" hidden>
+    <div class="page-head page-head--contact">
+      <p class="eyebrow">Say hello</p>
+      <h1 class="h1">Weâ€™d love to hear from you</h1>
+      <p class="page-head__lede">Questions about sizing, fabric or an order? Our team in Bengaluru replies within one working day.</p>
+    </div>
+
+    <div class="contact">
+      <div class="contact__form-wrap">
+        <form class="form contact__form" data-contact-form novalidate>
+          <div class="field-row">
+            <div class="field">
+              <label for="c-name">Full name</label>
+              <input id="c-name" name="name" type="text" placeholder="Your name" autocomplete="off">
+            </div>
+            <div class="field">
+              <label for="c-email">Email</label>
+              <input id="c-email" name="email" type="email" placeholder="you@example.com" autocomplete="off">
+            </div>
+          </div>
+          <div class="field">
+            <label for="c-topic">What is this about?</label>
+            <select id="c-topic" name="topic">
+              <option>General enquiry</option>
+              <option>Order support</option>
+              <option>Size &amp; fit advice</option>
+              <option>Wholesale / collaboration</option>
+              <option>Returns</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="c-message">Message</label>
+            <textarea id="c-message" name="message" rows="5" placeholder="Tell us a little moreâ€¦"></textarea>
+          </div>
+          <button class="btn btn--primary" type="submit">Send enquiry</button>
+          <p class="micro">This is a demo form. Nothing is submitted, sent or stored.</p>
+          <p class="form-success" data-contact-success hidden>Thanks â€” in the live site our team would reply within one working day. Nothing was sent in this prototype.</p>
+        </form>
+      </div>
+
+      <aside class="contact__aside">
+        <div class="contact__card">
+          <h2 class="h3">Studio &amp; support</h2>
+          <address>
+            Urban Threads Studio<br>
+            2nd Floor, 80 Feet Road<br>
+            Indiranagar, Bengaluru 560038
+          </address>
+          <dl class="contact__list">
+            <div><dt>Email</dt><dd>hello@urbanthreads.example</dd></div>
+            <div><dt>Phone</dt><dd>+91 80 0000 0000</dd></div>
+            <div><dt>Hours</dt><dd>Monâ€“Sat, 10:00â€“18:00 IST</dd></div>
+          </dl>
+          <p class="micro">Fictional contact details for prototype purposes.</p>
+        </div>
+
+        <div class="contact__card contact__card--faq">
+          <h2 class="h3">Quick answers</h2>
+          <details>
+            <summary>How do I choose my size?</summary>
+            <p>Every product page carries a measurement chart in inches and centimetres, plus fit notes from the design team.</p>
+          </details>
+          <details>
+            <summary>What is the return window?</summary>
+            <p>30 days from delivery, unused and with tags attached. Returns are free within India.</p>
+          </details>
+          <details>
+            <summary>Do you ship internationally?</summary>
+            <p>Not yet â€” we currently deliver across India. International shipping is planned for late 2026.</p>
+          </details>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <a class="brand brand--footer" href="#/">
+        <span class="brand__mark">UT</span>
+        <span class="brand__name">Urban&nbsp;Threads</span>
+      </a>
+      <p>Everyday clothing, designed in Bengaluru and made in small batches across India.</p>
+      <p class="micro">Design prototype Â· Fictional brand and sample data</p>
+    </div>
+    <nav class="footer__nav" aria-label="Footer">
+      <div>
+        <h2>Shop</h2>
+        <a href="#/shop">New arrivals</a>
+        <a href="#/shop" data-gender="Women">Womenswear</a>
+        <a href="#/shop" data-gender="Men">Menswear</a>
+        <a href="#/shop" data-gender="Indian wear">Indian wear</a>
+      </div>
+      <div>
+        <h2>Company</h2>
+        <a href="#/contact">Contact</a>
+        <a href="#/contact">Stockists</a>
+        <a href="#/contact">Careers</a>
+        <a href="#/login">My account</a>
+      </div>
+      <div>
+        <h2>Support</h2>
+        <a href="#/contact">Size guide</a>
+        <a href="#/contact">Shipping</a>
+        <a href="#/contact">Returns</a>
+        <a href="#/contact">Privacy</a>
+      </div>
+    </nav>
+  </div>
+  <div class="footer__bar">
+    <span>Â© 2026 Urban Threads (fictional). Prototype for client review.</span>
+    <span>Bengaluru Â· India</span>
+  </div>
+</footer>
+
+<!-- Quick view modal -->
+<div class="modal" data-product-modal hidden>
+  <div class="modal__overlay" data-close-modal></div>
+  <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="qv-title">
+    <button class="modal__close" type="button" aria-label="Close" data-close-modal>&times;</button>
+    <div class="modal__grid">
+      <div class="modal__media" data-qv-media>
+        <svg class="garment garment--lg" data-qv-svg><use href="#g-tee"/></svg>
+      </div>
+      <div class="modal__body">
+        <p class="eyebrow" data-qv-eyebrow></p>
+        <h2 class="h2" id="qv-title" data-qv-name></h2>
+        <p class="modal__price" data-qv-price></p>
+        <p class="modal__desc" data-qv-desc></p>
+        <div class="modal__sizes">
+          <span class="modal__label">Select size</span>
+          <div class="sizes" data-qv-sizes></div>
+        </div>
+        <dl class="modal__specs">
+          <div><dt>Fabric</dt><dd data-qv-fabric></dd></div>
+          <div><dt>Fit</dt><dd data-qv-fit></dd></div>
+          <div><dt>Delivery</dt><dd>2â€“5 working days</dd></div>
+        </dl>
+        <div class="modal__actions">
+          <a class="btn btn--primary" href="#/contact" data-close-modal>Enquire about this piece</a>
+          <button class="btn btn--ghost" type="button" data-close-modal>Keep browsing</button>
+        </div>
+        <p class="micro">Prototype preview â€” sizing and stock are illustrative.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Admin product modal -->
+<div class="modal" data-admin-modal hidden>
+  <div class="modal__overlay" data-close-admin></div>
+  <div class="modal__panel modal__panel--form" role="dialog" aria-modal="true" aria-labelledby="admin-modal-title">
+    <button class="modal__close" type="button" aria-label="Close" data-close-admin>&times;</button>
+    <div class="admin-form">
+      <p class="eyebrow">Catalogue</p>
+      <h2 class="h2" id="admin-modal-title" data-admin-modal-title>New product</h2>
+      <form class="form" data-product-form novalidate>
+        <input type="hidden" name="id">
+        <div class="field">
+          <label for="p-name">Product name</label>
+          <input id="p-name" name="name" type="text" placeholder="e.g. Everyday Cotton Tee" required>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="p-category">Category</label>
+            <select id="p-category" name="category">
+              <option>T-shirts</option><option>Shirts</option><option>Bottoms</option>
+              <option>Dresses</option><option>Indian wear</option><option>Outerwear</option><option>Sweatshirts</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="p-price">Price (â‚¹)</label>
+            <input id="p-price" name="price" type="number" min="0" step="1" placeholder="1499" required>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="p-stock">Stock</label>
+            <input id="p-stock" name="stock" type="number" min="0" step="1" placeholder="40">
+          </div>
+          <div class="field">
+            <label for="p-status">Status</label>
+            <select id="p-status" name="status"><option>Live</option><option>Draft</option></select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="p-desc">Description</label>
+          <textarea id="p-desc" name="description" rows="3" placeholder="Short product description shown to customers."></textarea>
+        </div>
+        <div class="admin-form__actions">
+          <button class="btn btn--ghost" type="button" data-close-admin>Cancel</button>
+          <button class="btn btn--primary" type="submit" data-product-submit>Save product</button>
+        </div>
+        <p class="micro">Demo only â€” saved in memory and reset on refresh.</p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="toast" role="status" aria-live="polite" data-toast></div>
+
+<script src="app.js"></script>
+</body>
+</html>
