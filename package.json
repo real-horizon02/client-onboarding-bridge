@@ -1,0 +1,31 @@
+{
+  "name": "client-onboarding-bridge",
+  "version": "0.1.0",
+  "description": "Multi-agent onboarding bridge: Telegram intake → Slack pipeline → PM approval → Telegram delivery",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest --forceExit",
+    "test:smoke": "node tests/smoke.js",
+    "lint": "eslint src/ tests/ --ext .js",
+    "check-env": "node scripts/check-env.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.5",
+    "uuid": "^10.0.0",
+    "pino": "^9.3.1",
+    "pino-pretty": "^11.2.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "eslint": "^9.6.0"
+  }
+}
+
